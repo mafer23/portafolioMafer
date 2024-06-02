@@ -6,9 +6,6 @@ import { FooterComponent } from './footer/footer.component';
 import { SectionComponent } from './section/section.component';
 import { ArticleComponent } from './article/article.component';
 import { MainComponent } from './main/main.component';
-import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component'
-
-
 
 @NgModule({
   declarations: [
@@ -17,8 +14,7 @@ import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.componen
     FooterComponent,
     SectionComponent,
     ArticleComponent,
-    MainComponent,
-    HamburgerMenuComponent
+    MainComponent
   ],
   imports: [
     CommonModule
