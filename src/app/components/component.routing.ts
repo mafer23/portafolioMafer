@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SectionComponent } from './section/section.component';
+import { ArticleComponent } from './article/article.component';
+import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,16 @@ const routes: Routes = [
     path: 'section',
     component: SectionComponent
   },
+  
+  {
+    path: 'article',
+    component: ArticleComponent
+  },
+ {
+  path: 'main',
+  component: MainComponent
+ },
+ 
   {
     path: '',
     redirectTo: '/home',

@@ -4,7 +4,9 @@ import {HomeComponent} from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SectionComponent } from './section/section.component';
-import { ArticleComponent } from './article/article.component'
+import { ArticleComponent } from './article/article.component';
+import { MainComponent } from './main/main.component';
+import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component'
 
 
 
@@ -14,7 +16,9 @@ import { ArticleComponent } from './article/article.component'
     NavbarComponent,
     FooterComponent,
     SectionComponent,
-    ArticleComponent
+    ArticleComponent,
+    MainComponent,
+    HamburgerMenuComponent
   ],
   imports: [
     CommonModule

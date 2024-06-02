@@ -1,31 +1,28 @@
-<nav class="flex  flex-col   py-12 w-full h-96 bg-slate-200 ">
-    <div class="flex  flex-row justify-start items-center	 ">
-
-        <img src=" ./../../../../assets/img/logo1.png" class=" animate-bounce w-16 h-16 ml-20  sm:mt-8  " alt="">
-        <div class="hidden space-x-24 m-auto font-sans  font-bold md:justify-center  md:flex " id="mega-menu-icons">
-
-            <a href="/navbar">HOME</a>
-            <a href="/home">ABOUT ME</a>
-            <a href="/section">PROJECTS</a>
+<nav class="flex flex-col py-12 md:py-8  w-full h-96 bg-slate-200">
+    <div class="flex flex-row justify-around items-center px-6">
+        <img src="./../../../../assets/img/logo1.png" class="animate-bounce w-16 h-16" alt="">
+        <div class="hidden space-x-24 font-sans font-bold md:flex justify-center items-center" id="mega-menu-icons">
+            <a href="/home">HOME</a>
+            <a href="/main">ABOUT ME</a>
+            <a href="/article">PROJECTS</a>
+        </div>
+        <div class="md:hidden">
+            <button (click)="toggleMenu()" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
     </div>
-    <div class="  flex  md:flex sm:hidden justify-center  bg-slate-200">
-        <div class="w-auto h-52  md:h-80 md:pt-8 md:ml-0  flex  justify-center  pt-20 ml-14 ">
-            <img src=" ./../../../../assets/img/gato2.png" id="gato" class="	 pt-12 w-80 h-52   md:w-96 md:h-72   "
-                alt="">
-
-        </div>
-
-
-        <div class="flex  justify-center   w-1/4 h-72 md:h-80 md:hidden lg:hidden ">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </div>
-
+    <div [ngClass]="{'hidden': !menuOpen}" class="md:hidden flex flex-col items-center mt-6 space-y-6 font-sans font-bold " id="mobile-menu">
+        <a href="/home" class="block">HOME</a>
+        <a href="/main" class="block">ABOUT ME</a>
+        <a href="/article" class="block">PROJECTS</a>
     </div>
-
-
-
+    <div class="flex justify-center bg-slate-200 mt-4">
+        <div *ngIf="!menuOpen" class="  w-auto h-44 md:h-80 flex justify-center pt-16  ">
+            <img src="./../../../../assets/img/gato2.png" id="gato" class="pt-12  w-80 h-48 md:w-96 md:h-64 " alt="">
+        </div>
+    </div>
 </nav>
+
